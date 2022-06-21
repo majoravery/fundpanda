@@ -3,12 +3,21 @@ import Carousel from "../components/Carousel/Carousel";
 import Cuisines from "../components/Cuisines/Cuisines";
 import Header from "../components/Header/Header";
 
+import search from "./assets/search.svg";
+
 import "./Homescreen.css";
 
 const Homescreen: React.FC = () => {
   return (
     <div className="Homescreen">
       <Header title="Home" subtitle="Robinson Road" />
+
+      <div className="Homescreen-search">
+        <div className="Homescreen-searchInner">
+          <img src={search} alt="search" />
+          <p>Search for shops & restaurants</p>
+        </div>
+      </div>
 
       <div className="Homescreen-cards">
         <div className="Homescreen-card m-foodDelivery">

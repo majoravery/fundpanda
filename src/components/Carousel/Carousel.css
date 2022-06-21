@@ -1,6 +1,6 @@
 .Carousel {
-    text-align: left;
     overflow: hidden;
+    text-align: left;
 }
 
 .Carousel-title {
@@ -17,10 +17,14 @@
 
 .Carousel-cards {
     display: flex;
+    flex-wrap: nowrap;
     gap: 8px;
     overflow-x: scroll;
+    overflow-y: hidden;
     padding-left: 16px;
+    position: relative;
     width: 1000%;
+    scroll-behavior: smooth;
 }
 
 .CarouselCard {
