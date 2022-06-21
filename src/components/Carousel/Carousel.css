@@ -1,0 +1,11 @@
+.Carousel {
+    text-align: left;
+}
+
+.Carousel-title {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;
+    color: #333333;   
+    padding: 0 16px;
+}

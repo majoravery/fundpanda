@@ -1,0 +1,33 @@
+.Header {
+    align-items: center;
+    background: #E21B70;
+    display: flex;
+    gap: 24px;
+    padding: 8px 24px;
+    padding-top: 36px;
+}
+
+.Header-info {
+    text-align: left;
+    flex-grow: 1;
+}
+
+.Header-title {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.Header-subtitle {
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.Header-rightNav img + img {
+    margin-left: 24px;
+}

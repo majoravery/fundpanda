@@ -10,8 +10,6 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <h1>fundpanda</h1>
-
       <Routes>
         <Route path="/" element={<Homescreen />} />
         <Route path="search" element={<SearchPage />} />

@@ -1,12 +1,42 @@
 import React from "react";
+import Carousel from "../components/Carousel/Carousel";
+import Header from "../components/Header/Header";
+
 import "./Homescreen.css";
 
-function Homescreen() {
+const Homescreen: React.FC = () => {
   return (
     <div className="Homescreen">
-      <h1>Homescreen</h1>
+      <Header title="Home" subtitle="Robinson Road" />
+
+      <div className="Homescreen-cards">
+        <div className="Homescreen-card m-foodDelivery">
+          <p className="Homescreen-cardTitle">Food delivery</p>
+          <p className="Homescreen-cardSubtitle">Order the food you love</p>
+        </div>
+        <div className="Homescreen-card m-pandamart">
+          <p className="Homescreen-cardTitle">pandamart</p>
+          <p className="Homescreen-cardSubtitle">20% off</p>
+        </div>
+        <div className="Homescreen-card m-pickUp">
+          <p className="Homescreen-cardTitle">Pick-up</p>
+          <p className="Homescreen-cardSubtitle">Skip the line</p>
+        </div>
+        <div className="Homescreen-card m-shops">
+          <p className="Homescreen-cardTitle">Shops</p>
+          <p className="Homescreen-cardSubtitle">Get essentials</p>
+        </div>
+        <div className="Homescreen-card m-dineIn">
+          <p className="Homescreen-cardTitle">Dine-in</p>
+          <p className="Homescreen-cardSubtitle">Up to 20% off</p>
+        </div>
+      </div>
+
+      <div className="Homescreen-recentlyOrdered">
+        <Carousel title="Recently ordered" />
+      </div>
     </div>
   );
-}
+};
 
 export default Homescreen;

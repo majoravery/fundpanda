@@ -1,3 +1,101 @@
 .Homescreen {
     display: block;
 }
+
+.Homescreen-cards {
+    background: #EFF2F4;
+    padding: 16px;
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.Homescreen-card {
+    border-radius: 8px;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    border: 0.5px solid #DCDCDC;
+    text-align: left;
+    padding: 8px 16px;
+    min-height: 64px;
+}
+
+.Homescreen-card.m-foodDelivery {
+    background-image: url('./assets/food-delivery.svg');
+    background-size: 100%;
+    background-position: bottom right;
+    grid-column: 1;
+    grid-row: 1 / span 3;
+}
+
+.Homescreen-card.m-pandamart {
+    background-image: url('./assets/pandamart.svg');
+    background-size: 40%;
+    background-position: bottom right;
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.Homescreen-card.m-pickUp {
+    background-image: url('./assets/pick-up.svg');
+    background-size: 80%;
+    background-position: bottom right;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+
+.Homescreen-card.m-shops {
+    background-image: url('./assets/shops.svg');
+    background-size: 50%;
+    background-position: bottom right;
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.Homescreen-card.m-dineIn {
+    background-image: url('./assets/dine-in.svg');
+    background-size: 50%;
+    background-position: bottom right;
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.Homescreen-card.m-foodDelivery > .Homescreen-cardTitle {
+    font-size: 24px;
+    line-height: 28px;
+    color: #333333;
+    margin: 0;
+    font-weight: 700;
+}
+
+.Homescreen-card.m-foodDelivery > .Homescreen-cardSubtitle {
+    font-size: 14px;
+    line-height: 16px;
+    color: #707070;
+    margin: 0;
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+.Homescreen-cardTitle {
+    font-size: 18px;
+    line-height: 21px;
+    color: #333333;
+    margin: 0;
+    font-weight: 700;
+}
+
+.Homescreen-cardSubtitle {
+    font-size: 12px;
+    line-height: 14px;
+    color: #707070;
+    margin: 0;
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+.Homescreen-recentlyOrdered {
+    margin-top: 24px;
+}
