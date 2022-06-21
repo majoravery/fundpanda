@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+
+import Homescreen from "./Homescreen/Homescreen";
+import RestaurantListingPage from "./RestaurantListingPage/RestaurantListingPage";
+import SearchPage from "./SearchPage/SearchPage";
+
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>fundpanda</h1>
+
+      <Routes>
+        <Route path="/" element={<Homescreen />} />
+        <Route path="search" element={<SearchPage />} />
+        <Route path="restaurant" element={<RestaurantListingPage />} />
+      </Routes>
     </div>
   );
 }
