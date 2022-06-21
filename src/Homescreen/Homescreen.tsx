@@ -4,13 +4,27 @@ import Cuisines from "../components/Cuisines/Cuisines";
 import Header from "../components/Header/Header";
 
 import search from "./assets/search.svg";
+import cart from "./assets/cart.svg";
+import heart from "./assets/heart.svg";
+import menu from "./assets/menu.svg";
 
 import "./Homescreen.css";
 
 const Homescreen: React.FC = () => {
   return (
     <div className="Homescreen">
-      <Header title="Home" subtitle="Robinson Road" />
+      <Header
+        theme="pink"
+        title="Home"
+        subtitle="Robinson Road"
+        leftIcons={<img src={menu} alt="menu" />}
+        rightIcons={
+          <>
+            <img src={heart} alt="heart" />
+            <img src={cart} alt="cart" />
+          </>
+        }
+      />
 
       <div className="Homescreen-search">
         <div className="Homescreen-searchInner">
