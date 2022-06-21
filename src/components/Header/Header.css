@@ -17,7 +17,6 @@
     font-size: 16px;
     line-height: 19px;
     font-weight: 700;
-    margin: 0;
 }
 
 .Header-subtitle {
@@ -25,7 +24,6 @@
     font-size: 12px;
     line-height: 14px;
     font-weight: 400;
-    margin: 0;
 }
 
 .Header-rightNav img + img {

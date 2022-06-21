@@ -1,3 +1,5 @@
+import favourite from "./assets/favourite.svg";
+
 import "./Carousel.css";
 
 type CarouselCardProps = {
@@ -13,15 +15,20 @@ const CarouselCard: React.FC<CarouselCardProps> = ({
 }) => {
   return (
     <div className="CarouselCard">
-      <div className="CarouselCard-image">
-        <img src="" alt="" />
-        <div className="CarouselCard-title">
-          <p>{title}</p>
-        </div>
-        <div className="CarouselCard-info">
-          <p className="CarouselCard-pricing">{pricing}</p>
-          <p className="CarouselCard-categories">{categories}</p>
-        </div>
+      <div className="CarouselCard-imageWrap">
+        <img
+          src="https://dummyimage.com/240x150/aaa"
+          alt=""
+          className="CarouselCard-image"
+        />
+        <img src={favourite} alt="" className="CarouselCard-favourite" />
+      </div>
+      <div className="CarouselCard-title">
+        <p>{title}</p>
+      </div>
+      <div className="CarouselCard-info">
+        <p className="CarouselCard-pricing">{pricing}</p>·
+        <p className="CarouselCard-categories">{categories}</p>
       </div>
     </div>
   );
@@ -32,18 +39,23 @@ type CarouselProps = {
 };
 
 const Carousel: React.FC<CarouselProps> = ({ title }) => {
-  const items: any[] = [];
+  const items: any[] = [
+    { title: "Lorem ipsum", pricing: "$", categories: "Mexican, Healthy" },
+    { title: "Lorem ipsum", pricing: "$", categories: "Mexican, Healthy" },
+  ];
 
   return (
     <div className="Carousel">
       <p className="Carousel-title">{title}</p>
-      {items.map((item) => (
-        <CarouselCard
-          title={item.title}
-          pricing={item.pricing}
-          categories={item.categories}
-        />
-      ))}
+      <div className="Carousel-cards">
+        {items.map((item) => (
+          <CarouselCard
+            title={item.title}
+            pricing={item.pricing}
+            categories={item.categories}
+          />
+        ))}
+      </div>
     </div>
   );
 };

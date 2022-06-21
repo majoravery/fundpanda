@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel from "../components/Carousel/Carousel";
+import Cuisines from "../components/Cuisines/Cuisines";
 import Header from "../components/Header/Header";
 
 import "./Homescreen.css";
@@ -32,9 +33,17 @@ const Homescreen: React.FC = () => {
         </div>
       </div>
 
-      <div className="Homescreen-recentlyOrdered">
-        <Carousel title="Recently ordered" />
-      </div>
+      <section>
+        <div className="Homescreen-recentlyOrdered">
+          <Carousel title="Recently ordered" />
+        </div>
+      </section>
+
+      <section>
+        <div className="Homescreen-cuisines">
+          <Cuisines />
+        </div>
+      </section>
     </div>
   );
 };

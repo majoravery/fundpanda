@@ -1,4 +1,9 @@
 import React from "react";
+
+import cart from "./assets/cart.svg";
+import heart from "./assets/heart.svg";
+import menu from "./assets/menu.svg";
+
 import "./Header.css";
 
 type HeaderProps = {
@@ -10,15 +15,15 @@ const Header: React.FC<HeaderProps> = ({ title, subtitle }) => {
   return (
     <div className="Header">
       <div className="Header-leftNav">
-        <img src="https://dummyimage.com/17x17/fff/fff" alt="menu" />
+        <img src={menu} alt="menu" />
       </div>
       <div className="Header-info">
         <p className="Header-title">{title}</p>
         <p className="Header-subtitle">{subtitle}</p>
       </div>
       <div className="Header-rightNav">
-        <img src="https://dummyimage.com/17x17/fff/fff" alt="heart" />
-        <img src="https://dummyimage.com/17x17/fff/fff" alt="cart" />
+        <img src={heart} alt="heart" />
+        <img src={cart} alt="cart" />
       </div>
     </div>
   );

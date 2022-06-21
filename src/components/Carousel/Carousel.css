@@ -1,5 +1,6 @@
 .Carousel {
     text-align: left;
+    overflow: hidden;
 }
 
 .Carousel-title {
@@ -9,3 +10,64 @@
     color: #333333;   
     padding: 0 16px;
 }
+
+.Carousel-title + .Carousel-cards {
+    margin-top: 8px;
+}
+
+.Carousel-cards {
+    display: flex;
+    gap: 8px;
+    overflow-x: scroll;
+    padding-left: 16px;
+    width: 1000%;
+}
+
+.CarouselCard {
+    cursor: pointer;
+    width: 70vw;
+}
+
+.CarouselCard-imageWrap {
+    position: relative;
+    width: 100%;
+}
+
+.CarouselCard-image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.CarouselCard-favourite {
+    position: absolute;
+    top: 8px; 
+    right: 8px;
+    z-index: 2;
+    width: 36px;
+    height: 36px;
+}
+
+.CarouselCard-image + .CarouselCard-title {
+    margin-top: 8px;
+}
+
+.CarouselCard-title {
+    font-size: 14px;
+    line-height: 16px;
+    color: #333333;
+    font-weight: 700;
+}
+
+.CarouselCard-title + .CarouselCard-info {
+    margin-top: 4px;
+}
+
+.CarouselCard-info {
+    display: flex;
+    gap: 4px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #707070;
+    font-weight: 400;
+}
+

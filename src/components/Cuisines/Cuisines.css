@@ -1,0 +1,60 @@
+.Cuisines {
+    text-align: left;
+    overflow: hidden;
+}
+
+.Cuisines-title {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;
+    color: #333333;   
+    padding: 0 16px;
+}
+
+.Cuisines-title + .Cuisines-cards {
+    margin-top: 8px;
+}
+
+.Cuisines-cards {
+    display: flex;
+    gap: 8px;
+    padding-left: 16px;
+}
+
+.Cuisines-cards + .Cuisines-cards {
+    margin-top: 16px;
+}
+
+.CuisineCard {
+    cursor: pointer;
+    text-align: center;
+}
+
+.CuisineCard-image {
+    background-image: url();
+    background-position: center right;
+    background-repeat: no-repeat;
+    width: 85px;
+    height: 85px;
+    background: #F7F7F7;
+    border-radius: 8px;
+}
+
+.CuisineCard:nth-child(odd) .CuisineCard-image {
+    background-image: url('./assets/food1.svg');
+}
+
+.CuisineCard:nth-child(even) .CuisineCard-image {
+    background-image: url('./assets/food2.svg');
+}
+
+.CuisineCard-image + .CuisineCard-title {
+    margin-top: 8px;
+}
+
+.CuisineCard-title {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
+    color: #000000;
+}
