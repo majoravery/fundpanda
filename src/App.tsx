@@ -6,6 +6,7 @@ import Demo from "./Demo/Demo";
 import Homescreen from "./Homescreen/Homescreen";
 import RestaurantListingPage from "./RestaurantListingPage/RestaurantListingPage";
 import SearchPage from "./SearchPage/SearchPage";
+import Favourites from "./Favourites/Favourites";
 import { QueryClient, QueryClientProvider } from "react-query";
 
 if (process.env.NODE_ENV === "development") {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/demo" element={<Demo />} />
           <Route path="search" element={<SearchPage />} />
           <Route path="restaurant" element={<RestaurantListingPage />} />
+          <Route path="favourites" element={<Favourites />} />
         </Routes>
       </div>
     </QueryClientProvider>
