@@ -10,8 +10,10 @@
     "@types/node": "^16.11.41",
     "@types/react": "^17.0.47",
     "@types/react-dom": "^17.0.17",
+    "axios": "^0.27.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-query": "^3.39.1",
     "react-router-dom": "6",
     "react-scripts": "5.0.1",
     "react-tinder-card": "^1.4.5",
@@ -42,5 +44,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "msw": "^0.42.1"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
