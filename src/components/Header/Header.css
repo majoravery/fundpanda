@@ -1,10 +1,25 @@
 .Header {
     align-items: center;
-    background: #E21B70;
     display: flex;
     gap: 24px;
     padding: 8px 24px;
     padding-top: 36px;
+}
+
+.Header.m-pink {
+    background: #E21B70;
+}
+
+.Header.m-pink p {
+    color: #ffffff;
+}
+
+.Header.m-white {
+    background: #FFFFFF;
+}
+
+.Header.m-white p {
+    color: #333333;
 }
 
 .Header-info {
@@ -13,7 +28,6 @@
 }
 
 .Header-title {
-    color: #ffffff;
     font-size: 16px;
     line-height: 19px;
     font-weight: 700;
@@ -24,6 +38,11 @@
     font-size: 12px;
     line-height: 14px;
     font-weight: 400;
+}
+
+.Header-leftNav,
+.Header-rightNav {
+    font-size: 0;
 }
 
 .Header-rightNav img + img {
