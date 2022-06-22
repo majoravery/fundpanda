@@ -105,7 +105,10 @@ export const FoodSwipeComponent = () => {
                 >
                   <div className="Top">
                     <div className="DiscountBadge">{food.deal}</div>
-                    <IconHeart className="HeartTop" />
+                    <IconHeart
+                      className="HeartTop"
+                      onPointerDown={() => navigate("/yumlist")}
+                    />
                   </div>
                   {/* <div className="Action">
                   <img

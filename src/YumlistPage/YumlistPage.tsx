@@ -9,12 +9,30 @@ import { useNavigate } from "react-router-dom";
 import { FoodSwipeComponent } from "../FoodSwipe/FoodSwipe";
 import back from "./assets/back.svg";
 import cross from "./assets/cross.svg";
+import cls from "classnames";
+import Tag from "components/Tag/Tag";
+
+const tabs = [
+  { value: "restaurants", label: "Restaurants" },
+  { value: "shops", label: "Shops" },
+  { value: "food", label: "Food" },
+];
+
+const tags = [
+  "vegatrian + fast food",
+  "vegetarian + desserts",
+  "pizza",
+  "bubble tea",
+  "salad",
+  "fast food",
+];
 
 const YumlistPage = () => {
   const { data } = useGetYumlist({ cid: "1111" });
   const [showYumlistItem, setShowYumlistItem] = useState<Pinder | null>(null);
+  const [selectedTab, setSelectedTab] = useState("food");
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const navigate = useNavigate();
-  console.log(showYumlistItem);
 
   return (
     <div className="YumlistPage">
@@ -23,11 +41,41 @@ const YumlistPage = () => {
           <div className="back" onClick={() => navigate(-1)}>
             <img src={back} alt="back" />
           </div>
-          <div className="text">
-            <div className="title">Your Yumlist</div>
-            <div className="subtitle">Add them to cart</div>
-          </div>
         </div>
+        <div className="text">
+          <div className="title">Favourites</div>
+        </div>
+      </div>
+
+      <div className="tabs">
+        {tabs.map((tab) => (
+          <div
+            className={cls("tab", { selected: tab.value === selectedTab })}
+            onClick={() => setSelectedTab(tab.value)}
+          >
+            {tab.label}
+            {tab.value === selectedTab && <div className="bar"></div>}
+          </div>
+        ))}
+      </div>
+
+      <div className="tags">
+        {tags.map((tag) => (
+          <div
+            key={tag}
+            className="yumlistTag"
+            onClick={() => {
+              if (selectedTags.includes(tag))
+                setSelectedTags(selectedTags.filter((t) => t !== tag));
+              else setSelectedTags((t) => [...t, tag]);
+            }}
+          >
+            <Tag
+              content={tag}
+              type={selectedTags.includes(tag) ? "filled" : undefined}
+            />
+          </div>
+        ))}
       </div>
 
       <div className="yumlist">
