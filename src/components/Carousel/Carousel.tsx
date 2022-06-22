@@ -1,5 +1,7 @@
 import "./Carousel.css";
 
+import { useEffect, useState } from "react";
+
 import favourite from "./assets/favourite.svg";
 
 type CarouselCardProps = {
@@ -8,19 +10,49 @@ type CarouselCardProps = {
   categories: string;
 };
 
+function getRandomInt(max: number) {
+  return Math.floor(Math.random() * max);
+}
+
+const useImage = () => {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [image, setImage] = useState(null);
+
+  const idx = getRandomInt(10);
+
+  useEffect(() => {
+    const fetchImage = async () => {
+      try {
+        const response = await import(`./assets/${idx}.jpg`); // change relative path to suit your needs
+        setImage(response.default);
+      } catch (err) {
+        setError(err as any);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchImage();
+  }, [idx]);
+
+  return {
+    loading,
+    error,
+    image,
+  };
+};
+
 const CarouselCard: React.FC<CarouselCardProps> = ({
   title,
   pricing,
   categories,
 }) => {
+  const { image } = useImage();
   return (
     <div className="CarouselCard">
       <div className="CarouselCard-imageWrap">
-        <img
-          src="https://dummyimage.com/240x150/aaa"
-          alt=""
-          className="CarouselCard-image"
-        />
+        <img src={image || ""} alt="" className="CarouselCard-image" />
         <img src={favourite} alt="" className="CarouselCard-favourite" />
       </div>
       <div className="CarouselCard-title">
