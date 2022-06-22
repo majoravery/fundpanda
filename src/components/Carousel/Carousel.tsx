@@ -34,7 +34,7 @@ const useImage = () => {
     };
 
     fetchImage();
-  }, [idx]);
+  }, []); // eslint-disable-line
 
   return {
     loading,
