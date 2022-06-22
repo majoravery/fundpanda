@@ -1,50 +1,50 @@
 .Header {
-    align-items: center;
-    display: flex;
-    gap: 24px;
-    padding: 8px 24px;
-    padding-top: 36px;
+  align-items: center;
+  display: flex;
+  gap: 24px;
+  padding: 8px 24px;
+  /* padding-top: 36px; */
 }
 
 .Header.m-pink {
-    background: #E21B70;
+  background: #e21b70;
 }
 
 .Header.m-pink p {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .Header.m-white {
-    background: #FFFFFF;
+  background: #ffffff;
 }
 
 .Header.m-white p {
-    color: #333333;
+  color: #333333;
 }
 
 .Header-info {
-    text-align: left;
-    flex-grow: 1;
+  text-align: left;
+  flex-grow: 1;
 }
 
 .Header-title {
-    font-size: 16px;
-    line-height: 19px;
-    font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
 }
 
 .Header-subtitle {
-    color: #ffffff;
-    font-size: 12px;
-    line-height: 14px;
-    font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
 }
 
 .Header-leftNav,
 .Header-rightNav {
-    font-size: 0;
+  font-size: 0;
 }
 
 .Header-rightNav img + img {
-    margin-left: 24px;
+  margin-left: 24px;
 }

@@ -1,17 +1,21 @@
-import React from "react";
-
 import "./Header.css";
 
+import React from "react";
+
+import cart from "./assets/cart.svg";
+import heart from "./assets/heart.svg";
+import menu from "./assets/menu.svg";
+
 type HeaderProps = {
-  theme: "pink" | "white";
+  theme?: "pink" | "white";
   title: string;
   subtitle?: string;
-  leftIcons: JSX.Element;
-  rightIcons: JSX.Element;
+  leftIcons?: JSX.Element;
+  rightIcons?: JSX.Element;
 };
 
 const Header: React.FC<HeaderProps> = ({
-  theme,
+  theme = "pink",
   title,
   subtitle,
   leftIcons,
@@ -19,12 +23,23 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
   return (
     <div className={`Header m-${theme}`}>
-      <div className="Header-leftNav">{leftIcons}</div>
+      <div className="Header-leftNav">
+        {leftIcons ? leftIcons : <img src={menu} alt="menu" />}
+      </div>
       <div className="Header-info">
         <p className="Header-title">{title}</p>
         {subtitle && <p className="Header-subtitle">{subtitle}</p>}
       </div>
-      <div className="Header-rightNav">{rightIcons}</div>
+      <div className="Header-rightNav">
+        {rightIcons ? (
+          rightIcons
+        ) : (
+          <>
+            <img src={heart} alt="heart" />
+            <img src={cart} alt="cart" />
+          </>
+        )}
+      </div>
     </div>
   );
 };

@@ -3,7 +3,6 @@ import "./App.css";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { Route, Routes } from "react-router-dom";
 
-import Demo from "./Demo/Demo";
 import Favourites from "./Favourites/Favourites";
 import FoodSwipe from "./FoodSwipe/FoodSwipe";
 import Homescreen from "./Homescreen/Homescreen";
@@ -23,7 +22,6 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Homescreen />} />
-          <Route path="/demo" element={<Demo />} />
           <Route path="/swipe" element={<FoodSwipe />} />
           <Route path="search" element={<SearchPage />} />
           <Route path="restaurant" element={<RestaurantListingPage />} />
