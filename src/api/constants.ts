@@ -1,5 +1,5 @@
 export const API_URL = {
-  PINDER: "/pinder",
+  RECOMMENDATIONS: "/recommendations",
 };
 
 export const QUERY_KEY = {
