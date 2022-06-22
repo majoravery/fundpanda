@@ -18,7 +18,7 @@ declare type Direction = "left" | "right" | "up" | "down";
 
 const db = [
   {
-    name: "Richard Hendricks",
+    name: "Vegan Burger",
     url: richard,
   },
   {
@@ -108,7 +108,7 @@ export const FoodSwipeComponent = () => {
               </div>
               <div className="Info">
                 <div className="row">
-                  <div className="Name">Vegan Burger</div>
+                  <div className="Name">{food.name}</div>
                   <div>$10.00</div>
                 </div>
                 <div className="row">
@@ -122,7 +122,11 @@ export const FoodSwipeComponent = () => {
                 </div>
                 <div className="row DeliveryFee">$1.99 delivery</div>
               </div>
-              <button className="fp-btn" onClick={() => alert(`Let's order`)}>
+              <button
+                className="fp-btn"
+                onClick={() => console.log(`Let's order`)}
+                onPointerDown={() => console.log(`Let's order`)}
+              >
                 ORDER
               </button>
             </TinderCard>
