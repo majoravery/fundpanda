@@ -1,11 +1,15 @@
 /* eslint-disable jsx-a11y/heading-has-content */
 import "./FoodSwipe.scss";
 
-import { useState } from "react";
+import { createRef, useMemo } from "react";
 import TinderCard from "react-tinder-card";
 import { useLongPress } from "use-long-press";
 
 import Header from "../components/Header/Header";
+import ImgHeartTop from "./icons/heart-top.png";
+import ImgLike from "./icons/like.png";
+import ImgNope from "./icons/nope.png";
+import ImgStar from "./icons/star.png";
 import dinesh from "./images/1.jpg";
 import erlich from "./images/2.jpg";
 import jared from "./images/3.jpg";
@@ -38,17 +42,16 @@ const db = [
 ];
 
 export default function FoodSwipe() {
-  const [lastDirection, setLastDirection] = useState<Direction>();
-
   const swiped = (direction: Direction, nameToDelete: string) => {
-    console.log("removing: " + nameToDelete);
-    setLastDirection(direction);
+    if (direction === "right") {
+      console.log("direction", direction);
+    } else if (direction === "left") {
+      console.log("direction", direction);
+    }
   };
 
-  console.log("lastDirection", lastDirection);
-
   const outOfFrame = (name: string) => {
-    console.log(name + " left the screen!");
+    console.log(name + " is outOfFrame!");
   };
 
   const bind = useLongPress(
@@ -57,6 +60,20 @@ export default function FoodSwipe() {
     },
     { threshold: 500 }
   );
+
+  // const childRefs = useMemo(
+  //   () =>
+  //     Array(db.length)
+  //       .fill(0)
+  //       .map((i) => createRef()),
+  //   []
+  // );
+
+  // const swipe = async (dir) => {
+  //   if (canSwipe && currentIndex < db.length) {
+  //     await childRefs[currentIndex].current.swipe(dir); // Swipe the card!
+  //   }
+  // };
 
   return (
     <div id="FoodSwipe">
@@ -67,7 +84,6 @@ export default function FoodSwipe() {
             <TinderCard
               className="swipe"
               key={food.name}
-              // swipeRequirementType="position"
               preventSwipe={["up", "down"]}
               onSwipe={(dir) => swiped(dir, food.name)}
               onCardLeftScreen={() => outOfFrame(food.name)}
@@ -77,11 +93,34 @@ export default function FoodSwipe() {
                 className="card"
                 {...bind()}
               >
-                {/* <h3>{food.name}</h3> */}
-                <button className="fp-btn" onClick={() => alert(`Let's order`)}>
-                  ORDER
-                </button>
+                <div className="Top">
+                  <div className="DiscountBadge">Discount 5%</div>
+                  <img className="HeartTop" src={ImgHeartTop} alt="fav" />
+                </div>
+                <div className="Action">
+                  <img src={ImgNope} alt="nope" />
+                  <img src={ImgLike} alt="like" />
+                </div>
               </div>
+              <div className="Info">
+                <div className="row">
+                  <div className="Name">Vegan Burger</div>
+                  <div>$10.00</div>
+                </div>
+                <div className="row">
+                  <div>Hans’ Somerset</div>
+                  <div className="Review">
+                    <img src={ImgStar} alt="review" />
+                    <div className="Score">
+                      4.9 <span> (764)</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="row DeliveryFee">$1.99 delivery</div>
+              </div>
+              <button className="fp-btn" onClick={() => alert(`Let's order`)}>
+                ORDER
+              </button>
             </TinderCard>
           );
         })}
