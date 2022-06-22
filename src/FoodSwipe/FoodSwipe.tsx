@@ -1,14 +1,12 @@
 /* eslint-disable jsx-a11y/heading-has-content */
 import "./FoodSwipe.scss";
 
-import { createRef, useMemo } from "react";
+import React, { useMemo } from "react";
 import TinderCard from "react-tinder-card";
 import { useLongPress } from "use-long-press";
 
 import Header from "../components/Header/Header";
-import ImgHeartTop from "./icons/heart-top.png";
-import ImgLike from "./icons/like.png";
-import ImgNope from "./icons/nope.png";
+import { ReactComponent as IconHeart } from "./icons/heart.svg";
 import ImgStar from "./icons/star.png";
 import dinesh from "./images/1.jpg";
 import erlich from "./images/2.jpg";
@@ -42,6 +40,14 @@ const db = [
 ];
 
 export default function FoodSwipe() {
+  const childRefs = useMemo(
+    () =>
+      Array(db.length)
+        .fill(0)
+        .map((i) => React.createRef<any>()),
+    []
+  );
+
   const swiped = (direction: Direction, nameToDelete: string) => {
     if (direction === "right") {
       console.log("direction", direction);
@@ -61,27 +67,14 @@ export default function FoodSwipe() {
     { threshold: 500 }
   );
 
-  // const childRefs = useMemo(
-  //   () =>
-  //     Array(db.length)
-  //       .fill(0)
-  //       .map((i) => createRef()),
-  //   []
-  // );
-
-  // const swipe = async (dir) => {
-  //   if (canSwipe && currentIndex < db.length) {
-  //     await childRefs[currentIndex].current.swipe(dir); // Swipe the card!
-  //   }
-  // };
-
   return (
     <div id="FoodSwipe">
       <Header title="Discover" subtitle="Swipe to find your love" />
       <div className="CardContainer">
-        {db.map((food) => {
+        {db.map((food, index) => {
           return (
             <TinderCard
+              ref={childRefs[index] as any}
               className="swipe"
               key={food.name}
               preventSwipe={["up", "down"]}
@@ -95,12 +88,23 @@ export default function FoodSwipe() {
               >
                 <div className="Top">
                   <div className="DiscountBadge">Discount 5%</div>
-                  <img className="HeartTop" src={ImgHeartTop} alt="fav" />
+                  {/* <img className="HeartTop" src={IconHeart} alt="fav" /> */}
+                  <IconHeart className="HeartTop" />
                 </div>
-                <div className="Action">
-                  <img src={ImgNope} alt="nope" />
-                  <img src={ImgLike} alt="like" />
-                </div>
+                {/* <div className="Action">
+                  <img
+                    src={ImgNope}
+                    alt="nope"
+                    onClick={() => {
+                      childRefs[index].current.swipe("left");
+                    }}
+                  />
+                  <img
+                    src={ImgLike}
+                    alt="like"
+                    onClick={() => childRefs[index].current.swipe("right")}
+                  />
+                </div> */}
               </div>
               <div className="Info">
                 <div className="row">
