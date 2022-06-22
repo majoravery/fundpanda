@@ -167,7 +167,7 @@ function RestaurantListingPage() {
                 if (showPreference === "fixed" && fixedPreferences.length !== 0)
                   setShowPreference("flex");
                 if (showPreference === "flex" && flexPreferences.length !== 0)
-                  navigate("/swipe");
+                  navigate("/foodswipe");
               }}
             >
               {showPreference === "fixed" ? "Next" : "Start Swiping"}
