@@ -104,7 +104,7 @@ export default function FoodSwipe() {
                     onClick={() => childRefs[index].current.swipe("right")}
                   />
                 </div> */}
-                <h1 className="like">LIKED</h1>
+                <h1 className="like">LIKE</h1>
                 <h1 className="nope">NOPE</h1>
               </div>
               <div className="Info">
