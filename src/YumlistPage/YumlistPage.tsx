@@ -1,12 +1,14 @@
+import "./YumlistPage.scss";
+
 import { Pinder } from "api/recommendations";
 import { useGetYumlist } from "api/yumlist";
 import Card from "components/Card/Card";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+import { FoodSwipeComponent } from "../FoodSwipe/FoodSwipe";
 import back from "./assets/back.svg";
 import cross from "./assets/cross.svg";
-
-import "./YumlistPage.scss";
 
 const YumlistPage = () => {
   const { data } = useGetYumlist({ cid: "1111" });
@@ -48,7 +50,7 @@ const YumlistPage = () => {
               </div>
             </div>
             <div className="content">
-              <div>Foodswipe Card</div>
+              <FoodSwipeComponent />
             </div>
           </div>
         </div>

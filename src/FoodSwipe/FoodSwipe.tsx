@@ -39,7 +39,7 @@ const db = [
   },
 ];
 
-export default function FoodSwipe() {
+export const FoodSwipeComponent = () => {
   const childRefs = useMemo(
     () =>
       Array(db.length)
@@ -69,7 +69,6 @@ export default function FoodSwipe() {
 
   return (
     <div id="FoodSwipe">
-      <Header title="Discover" subtitle="Swipe to find your love" />
       <div className="CardContainer">
         {db.map((food, index) => {
           return (
@@ -130,6 +129,15 @@ export default function FoodSwipe() {
           );
         })}
       </div>
+    </div>
+  );
+};
+
+export default function FoodSwipe() {
+  return (
+    <div id="FoodSwipe">
+      <Header title="Discover" subtitle="Swipe to find your love" />
+      <FoodSwipeComponent />
     </div>
   );
 }

@@ -7,20 +7,20 @@
     margin: 16px 16px 0;
 
     .left {
-        display: flex;
-        align-items: center;
+      display: flex;
+      align-items: center;
 
-        .text {
-            margin-left: 16px;
+      .text {
+        margin-left: 16px;
 
-            .title {
-                font-weight: 700;
-            }
-
-            .subtitle {
-                font-size: 12px;
-            }
+        .title {
+          font-weight: 700;
         }
+
+        .subtitle {
+          font-size: 12px;
+        }
+      }
     }
   }
 
@@ -34,7 +34,7 @@
 
   .yumlistModal {
     position: fixed;
-    background-color: #707070CC;
+    background-color: #707070cc;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,7 +46,7 @@
     transform: translate(-50%, -50%);
 
     .container {
-      background-color: white;
+      // background-color: white;
       width: 80%;
       height: 90%;
       opacity: 100%;
