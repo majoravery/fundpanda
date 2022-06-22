@@ -57,12 +57,25 @@
         }
     }
 
+    .campaignCarousel {
+        display: flex;
+        margin: 16px 0 16px 16px;
+        overflow: hidden;
+
+        .card {
+            width: 144px;
+            height: 171px;
+            
+            margin-right: 16px;
+        }
+    }
+
     .foodCarouselOne {
         margin-bottom: 16px;
     }
 
     .preference {
-        position: sticky;
+        position: fixed;
         z-index: 2;
         background-color: white;
         border-radius: 16px 16px 0 0;
@@ -119,6 +132,7 @@
 
         .footer {
             padding: 16px;
+            margin-bottom: 16px;
             
             .button {
                 color: white;

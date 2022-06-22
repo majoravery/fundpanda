@@ -8,6 +8,9 @@ import cart from "./assets/cart.svg";
 import filter from "./assets/filter.svg";
 import back from "./assets/back.svg";
 import swipe from "./assets/swipe.svg";
+import campaignOne from "./assets/campaignOne.png";
+import campaignTwo from "./assets/campaignTwo.png";
+import campaignThree from "./assets/campaignThree.png";
 
 import "./RestaurantListingPage.scss";
 import Tag from "components/Tag/Tag";
@@ -88,7 +91,17 @@ function RestaurantListingPage() {
 
       <div className="skinnyBanner"></div>
 
-      <div className="campaignCarousel"></div>
+      <div className="campaignCarousel">
+        <div className="card" onClick={() => setShowPreference("fixed")}>
+          <img src={campaignOne} alt="campaign-one" />
+        </div>
+        <div className="card">
+          <img src={campaignTwo} alt="campaign-two" />
+        </div>
+        <div className="card">
+          <img src={campaignThree} alt="campaign-three" />
+        </div>
+      </div>
 
       <div className="foodCarouselOne">
         <Carousel title="For you (and only you)" />
