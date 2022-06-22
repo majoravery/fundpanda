@@ -20,22 +20,32 @@ const db = [
   {
     name: "Vegan Burger",
     url: richard,
+    price: 20,
+    delivery: 1.8,
   },
   {
     name: "Erlich Bachman",
     url: erlich,
+    price: 25,
+    delivery: 1.9,
   },
   {
     name: "Monica Hall",
     url: monica,
+    price: 11,
+    delivery: 1.3,
   },
   {
     name: "Jared Dunn",
     url: jared,
+    price: 15,
+    delivery: 1.2,
   },
   {
     name: "Dinesh Chugtai",
     url: dinesh,
+    price: 30,
+    delivery: 1.1,
   },
 ];
 
@@ -109,7 +119,7 @@ export const FoodSwipeComponent = () => {
               <div className="Info">
                 <div className="row">
                   <div className="Name">{food.name}</div>
-                  <div>$10.00</div>
+                  <div>${food.price}</div>
                 </div>
                 <div className="row">
                   <div>Hans’ Somerset</div>
@@ -120,7 +130,7 @@ export const FoodSwipeComponent = () => {
                     </div>
                   </div>
                 </div>
-                <div className="row DeliveryFee">$1.99 delivery</div>
+                <div className="row DeliveryFee">{`$${food.delivery} delivery`}</div>
               </div>
               <button
                 className="fp-btn"
