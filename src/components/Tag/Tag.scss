@@ -1,0 +1,16 @@
+.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #DCDCDC;
+  padding: 9px 16px;
+  font-weight: 700;
+  font-size: 12px;
+  border-radius: 32px;
+
+  &.filled {
+    background-color: #D70F64;
+    border: 1px solid #D70F64;
+    color: white
+  }
+}
