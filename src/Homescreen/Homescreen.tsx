@@ -9,8 +9,11 @@ import heart from "./assets/heart.svg";
 import menu from "./assets/menu.svg";
 
 import "./Homescreen.css";
+import { useNavigate } from "react-router-dom";
 
 const Homescreen: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="Homescreen">
       <Header
@@ -34,7 +37,10 @@ const Homescreen: React.FC = () => {
       </div>
 
       <div className="Homescreen-cards">
-        <div className="Homescreen-card m-foodDelivery">
+        <div
+          className="Homescreen-card m-foodDelivery"
+          onClick={() => navigate("/restaurant")}
+        >
           <p className="Homescreen-cardTitle">Food delivery</p>
           <p className="Homescreen-cardSubtitle">Order the food you love</p>
         </div>

@@ -18,7 +18,7 @@ function RestaurantListingPage() {
       <div className="header">
         <div className="left">
           <div className="back">
-            <img src={back} alt="back" />
+            <img src={back} alt="back" onClick={() => navigate(-1)} />
           </div>
           <div className="text">
             <div className="title">Food delivery</div>
@@ -26,10 +26,10 @@ function RestaurantListingPage() {
           </div>
         </div>
         <div className="icon">
-          <div className="foodswipeIcon" onClick={() => navigate("foodswipe")}>
+          <div className="foodswipeIcon" onClick={() => navigate("/foodswipe")}>
             R
           </div>
-          <div className="yumlistIcon" onClick={() => navigate("yumlist")}>
+          <div className="yumlistIcon" onClick={() => navigate("/yumlist")}>
             <img src={heart} alt="heart" />
           </div>
           <div className="shoppingcartIcon">

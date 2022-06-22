@@ -9,6 +9,7 @@ import FoodSwipe from "./FoodSwipe/FoodSwipe";
 import Homescreen from "./Homescreen/Homescreen";
 import RestaurantListingPage from "./RestaurantListingPage/RestaurantListingPage";
 import SearchPage from "./SearchPage/SearchPage";
+import YumlistPage from "./YumlistPage/YumlistPage";
 
 if (process.env.NODE_ENV === "development") {
   require("mocks");
@@ -27,6 +28,7 @@ function App() {
           <Route path="search" element={<SearchPage />} />
           <Route path="restaurant" element={<RestaurantListingPage />} />
           <Route path="favourites" element={<Favourites />} />
+          <Route path="yumlist" element={<YumlistPage />} />
         </Routes>
       </div>
     </QueryClientProvider>
