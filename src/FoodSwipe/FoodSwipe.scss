@@ -90,13 +90,13 @@
     padding: 10px;
     font-weight: bold;
     &.like {
+      right: 20px;
       color: #018701;
-      left: 20px;
       // transform: rotate(30deg);
     }
     &.nope {
+      left: 20px;
       color: #ff0000;
-      right: 20px;
       // transform: rotate(-30deg);
     }
   }
