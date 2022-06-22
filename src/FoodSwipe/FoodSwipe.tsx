@@ -88,7 +88,6 @@ export default function FoodSwipe() {
               >
                 <div className="Top">
                   <div className="DiscountBadge">Discount 5%</div>
-                  {/* <img className="HeartTop" src={IconHeart} alt="fav" /> */}
                   <IconHeart className="HeartTop" />
                 </div>
                 {/* <div className="Action">
@@ -105,6 +104,8 @@ export default function FoodSwipe() {
                     onClick={() => childRefs[index].current.swipe("right")}
                   />
                 </div> */}
+                <h1 className="like">LIKED</h1>
+                <h1 className="nope">NOPE</h1>
               </div>
               <div className="Info">
                 <div className="row">

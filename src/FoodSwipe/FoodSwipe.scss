@@ -83,21 +83,21 @@
   h1 {
     border: 2px solid;
     text-align: center;
-    font-size: 30px;
+    font-size: 10px;
     display: inline-block;
     position: absolute;
-    top: 30px;
+    bottom: 8px;
     padding: 10px;
     font-weight: bold;
     &.like {
       color: #018701;
-      left: 30px;
-      transform: rotate(-30deg);
+      left: 20px;
+      // transform: rotate(30deg);
     }
     &.nope {
       color: #ff0000;
-      right: 30px;
-      transform: rotate(30deg);
+      right: 20px;
+      // transform: rotate(-30deg);
     }
   }
 
