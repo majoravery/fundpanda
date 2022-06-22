@@ -17,7 +17,7 @@ const CarouselCard: React.FC<CarouselCardProps> = ({
     <div className="CarouselCard">
       <div className="CarouselCard-imageWrap">
         <img
-          src="https://source.unsplash.com/random"
+          src="https://dummyimage.com/240x150/aaa"
           alt=""
           className="CarouselCard-image"
         />
