@@ -1,13 +1,18 @@
+import { Pinder } from "api/recommendations";
 import { useGetYumlist } from "api/yumlist";
 import Card from "components/Card/Card";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import back from "./assets/back.svg";
+import cross from "./assets/cross.svg";
 
 import "./YumlistPage.scss";
 
 const YumlistPage = () => {
   const { data } = useGetYumlist({ cid: "1111" });
+  const [showYumlistItem, setShowYumlistItem] = useState<Pinder | null>(null);
   const navigate = useNavigate();
+  console.log(showYumlistItem);
 
   return (
     <div className="YumlistPage">
@@ -25,11 +30,29 @@ const YumlistPage = () => {
 
       <div className="yumlist">
         {data?.map((yumlistItem) => (
-          <div className="yumlistItem">
+          <div
+            key={yumlistItem.dish_id}
+            className="yumlistItem"
+            onClick={() => setShowYumlistItem(yumlistItem)}
+          >
             <Card {...yumlistItem} />
           </div>
         ))}
       </div>
+      {showYumlistItem && (
+        <div className="yumlistModal">
+          <div className="container">
+            <div className="header">
+              <div className="icon" onClick={() => setShowYumlistItem(null)}>
+                <img src={cross} alt="Close" />
+              </div>
+            </div>
+            <div className="content">
+              <div>Foodswipe Card</div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

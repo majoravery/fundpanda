@@ -23,7 +23,7 @@ export const data: Pinder[] = [
     deal: "Free Delivery",
     dish_description: "Yummy, delicious plate of goodness",
     delivery_time: 12,
-    dish_id: "1111",
+    dish_id: "2222",
   },
   {
     image_url: "https://picsum.photos/175/160",
@@ -35,7 +35,7 @@ export const data: Pinder[] = [
     deal: "Free Delivery",
     dish_description: "Yummy, delicious plate of goodness",
     delivery_time: 12,
-    dish_id: "1111",
+    dish_id: "3333",
   },
   {
     image_url: "https://picsum.photos/120/160",
@@ -47,7 +47,7 @@ export const data: Pinder[] = [
     deal: "Free Delivery",
     dish_description: "Yummy, delicious plate of goodness",
     delivery_time: 12,
-    dish_id: "1111",
+    dish_id: "4444",
   },
   {
     image_url: "https://picsum.photos/149/160",
@@ -59,6 +59,6 @@ export const data: Pinder[] = [
     deal: "Free Delivery",
     dish_description: "Yummy, delicious plate of goodness",
     delivery_time: 12,
-    dish_id: "1111",
+    dish_id: "5555",
   },
 ];

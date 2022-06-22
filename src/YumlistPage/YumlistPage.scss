@@ -31,4 +31,41 @@
       margin-top: 16px;
     }
   }
+
+  .yumlistModal {
+    position: fixed;
+    background-color: #707070CC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .container {
+      background-color: white;
+      width: 80%;
+      height: 90%;
+      opacity: 100%;
+      z-index: 3;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+
+      .header {
+        display: flex;
+        justify-content: right;
+      }
+
+      .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+      }
+    }
+  }
 }
