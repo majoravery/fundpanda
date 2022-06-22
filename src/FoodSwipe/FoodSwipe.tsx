@@ -125,7 +125,7 @@ export const FoodSwipeComponent = () => {
               <button
                 className="fp-btn"
                 onClick={() => console.log(`Let's order`)}
-                onPointerDown={() => console.log(`Let's order`)}
+                onPointerDown={() => alert(`Let's order`)}
               >
                 ORDER
               </button>
