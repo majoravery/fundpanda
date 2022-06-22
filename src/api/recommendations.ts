@@ -36,7 +36,7 @@ export const useGetRecommendations = ({
   cid,
   city,
 }: GetRecommendationsRequest) => {
-  const result = useQuery([QUERY_KEY.GET_PINDER, cid, city], () =>
+  const result = useQuery([QUERY_KEY.GET_RECOMMENDATIONS, cid, city], () =>
     getRecommendations({ cid, city })
   );
 
