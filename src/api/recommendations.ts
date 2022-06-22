@@ -3,16 +3,16 @@ import { useQuery } from "react-query";
 import { API_URL, QUERY_KEY } from "./constants";
 
 export type Pinder = {
-  imageUrl: string;
-  dishName: string;
-  restaurantName: string;
+  image_url: string;
+  dish_name: string;
+  restaurant_name: string;
   price: number;
   rating: number;
-  deliveryFee: number;
+  delivery_fee: number;
   deal: string;
-  dishDescription: string;
-  deliveryTime: number;
-  dishId: string;
+  dish_description: string;
+  delivery_time: number;
+  dish_id: string;
 };
 
 type GetRecommendationsRequest = {

@@ -25,24 +25,27 @@ export const useGetYumlist = ({ cid }: GetYumlistRequest) => {
 };
 
 type AddYumlistRequest = {
-  customerId: string;
-  dishId: string;
+  customer_id: string;
+  dish_id: number;
 };
 
 type AddYumlistResponse = {};
 
-export const addYumlist = async ({ customerId, dishId }: AddYumlistRequest) => {
+export const addYumlist = async ({
+  customer_id,
+  dish_id,
+}: AddYumlistRequest) => {
   const url = `${API_URL.YUMLIST}`;
   const { data } = await axios.post<AddYumlistResponse>(url, {
-    customerId,
-    dishId,
+    customer_id,
+    dish_id,
   });
 
   return data;
 };
 
-export const useAddYumlist = ({ customerId, dishId }: AddYumlistRequest) => {
-  const result = useMutation(() => addYumlist({ customerId, dishId }));
+export const useAddYumlist = ({ customer_id, dish_id }: AddYumlistRequest) => {
+  const result = useMutation(() => addYumlist({ customer_id, dish_id }));
 
   return result;
 };
