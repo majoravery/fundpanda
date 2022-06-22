@@ -13,6 +13,8 @@ import erlich from "./images/2.jpg";
 import jared from "./images/3.jpg";
 import monica from "./images/4.jpg";
 import richard from "./images/5.jpg";
+import { useNavigate } from "react-router-dom";
+import { useGetRecommendations } from "api/recommendations";
 
 declare type Direction = "left" | "right" | "up" | "down";
 
@@ -50,6 +52,11 @@ const db = [
 ];
 
 export const FoodSwipeComponent = () => {
+  const navigate = useNavigate();
+  const { data } = useGetRecommendations({
+    cid: "sg109sdu",
+    city: "singapore",
+  });
   const childRefs = useMemo(
     () =>
       Array(db.length)
@@ -80,26 +87,27 @@ export const FoodSwipeComponent = () => {
   return (
     <div id="FoodSwipe">
       <div className="CardContainer">
-        {db.map((food, index) => {
-          return (
-            <TinderCard
-              ref={childRefs[index] as any}
-              className="swipe"
-              key={food.name}
-              preventSwipe={["up", "down"]}
-              onSwipe={(dir) => swiped(dir, food.name)}
-              onCardLeftScreen={() => outOfFrame(food.name)}
-            >
-              <div
-                style={{ backgroundImage: `url(${food.url})` }}
-                className="card"
-                {...bind()}
+        {data &&
+          data.map((food, index) => {
+            return (
+              <TinderCard
+                ref={childRefs[index] as any}
+                className="swipe"
+                key={food.dish_name}
+                preventSwipe={["up", "down"]}
+                onSwipe={(dir) => swiped(dir, food.dish_name)}
+                onCardLeftScreen={() => outOfFrame(food.dish_name)}
               >
-                <div className="Top">
-                  <div className="DiscountBadge">Discount 5%</div>
-                  <IconHeart className="HeartTop" />
-                </div>
-                {/* <div className="Action">
+                <div
+                  style={{ backgroundImage: `url(${db[index % 5].url})` }}
+                  className="card"
+                  {...bind()}
+                >
+                  <div className="Top">
+                    <div className="DiscountBadge">{food.deal}</div>
+                    <IconHeart className="HeartTop" />
+                  </div>
+                  {/* <div className="Action">
                   <img
                     src={ImgNope}
                     alt="nope"
@@ -113,35 +121,35 @@ export const FoodSwipeComponent = () => {
                     onClick={() => childRefs[index].current.swipe("right")}
                   />
                 </div> */}
-                <h1 className="nope">NOPE</h1>
-                <h1 className="like">LIKE</h1>
-              </div>
-              <div className="Info">
-                <div className="row">
-                  <div className="Name">{food.name}</div>
-                  <div>${food.price}</div>
+                  <h1 className="nope">NOPE</h1>
+                  <h1 className="like">LIKE</h1>
                 </div>
-                <div className="row">
-                  <div>Hans’ Somerset</div>
-                  <div className="Review">
-                    <img src={ImgStar} alt="review" />
-                    <div className="Score">
-                      4.9 <span> (764)</span>
+                <div className="Info">
+                  <div className="row">
+                    <div className="Name">{food.dish_name}</div>
+                    <div>S${food.price}</div>
+                  </div>
+                  <div className="row">
+                    <div>{food.restaurant_name}</div>
+                    <div className="Review">
+                      <img src={ImgStar} alt="review" />
+                      <div className="Score">
+                        {food.rating} <span> (764)</span>
+                      </div>
                     </div>
                   </div>
+                  <div className="row DeliveryFee">{food.delivery_fee}</div>
                 </div>
-                <div className="row DeliveryFee">{`$${food.delivery} delivery`}</div>
-              </div>
-              <button
-                className="fp-btn"
-                onClick={() => console.log(`Let's order`)}
-                onPointerDown={() => alert(`Let's order`)}
-              >
-                ORDER
-              </button>
-            </TinderCard>
-          );
-        })}
+                <button
+                  className="fp-btn"
+                  onClick={() => navigate(`/dish/${food.dish_id}`)}
+                  onPointerDown={() => navigate(`/dish/${food.dish_id}`)}
+                >
+                  ORDER
+                </button>
+              </TinderCard>
+            );
+          })}
       </div>
     </div>
   );

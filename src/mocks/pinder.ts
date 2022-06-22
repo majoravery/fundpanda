@@ -21,7 +21,7 @@ export const data: Pinder[] = [
     price: 10,
     rating: 4.9,
     delivery_fee: 1,
-    deal: "Free Delivery",
+    deal: "10% discount",
     dish_description:
       "Toasted german multigrain bun, avocado cream, tomato, mushroom, rocket leaves and a slice of gold vegan cheese and choice of 1 x Hot Drink",
     delivery_time: 12,
@@ -34,7 +34,7 @@ export const data: Pinder[] = [
     price: 10,
     rating: 4.9,
     delivery_fee: 1,
-    deal: "Free Delivery",
+    deal: "Delivery at 0.99",
     dish_description:
       "Toasted german multigrain bun, avocado cream, tomato, mushroom, rocket leaves and a slice of gold vegan cheese and choice of 1 x Hot Drink",
     delivery_time: 12,
@@ -47,7 +47,7 @@ export const data: Pinder[] = [
     price: 10,
     rating: 4.9,
     delivery_fee: 1,
-    deal: "Free Delivery",
+    deal: "$10 discount",
     dish_description:
       "Toasted german multigrain bun, avocado cream, tomato, mushroom, rocket leaves and a slice of gold vegan cheese and choice of 1 x Hot Drink",
     delivery_time: 12,
@@ -60,7 +60,7 @@ export const data: Pinder[] = [
     price: 10,
     rating: 4.9,
     delivery_fee: 1,
-    deal: "Free Delivery",
+    deal: "15% discount",
     dish_description:
       "Toasted german multigrain bun, avocado cream, tomato, mushroom, rocket leaves and a slice of gold vegan cheese and choice of 1 x Hot Drink",
     delivery_time: 12,

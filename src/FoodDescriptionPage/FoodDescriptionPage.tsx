@@ -16,7 +16,7 @@ const FoodDescriptionPage = () => {
   const { id } = useParams();
   const [beverage, setBeverage] = useState("");
   const [count, setCount] = useState(1);
-  const { data } = useGetYumlist({ cid: "1234" });
+  const { data } = useGetYumlist({ cid: "sg109sdu" });
   const dish = data?.find(({ dish_id }) => dish_id === id);
 
   return (

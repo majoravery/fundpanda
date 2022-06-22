@@ -4,8 +4,8 @@ import "./SearchPage.css";
 
 function SearchPage() {
   const { data } = useGetRecommendations({
-    cid: "1234",
-    city: "Singapore",
+    cid: "sg109sdu",
+    city: "singapore",
   });
 
   return (
