@@ -1,9 +1,12 @@
-import { useGetPinder } from "api/pinder";
+import { useGetRecommendations } from "api/recommendations";
 import React from "react";
 import "./SearchPage.css";
 
 function SearchPage() {
-  const { data } = useGetPinder({ customerCode: "1234", city: "Singapore" });
+  const { data } = useGetRecommendations({
+    cid: "1234",
+    city: "Singapore",
+  });
 
   return (
     <div className="SearchPage">
