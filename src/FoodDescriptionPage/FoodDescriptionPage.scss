@@ -1,0 +1,142 @@
+.FoodDescriptionPage {
+  .imageContainer {
+    overflow: hidden;
+    height: 240px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+
+      .title {
+        font-weight: 700;
+        font-size: 24px;
+      }
+
+      .price {
+        font-size: 14px;
+        font-weight: 700;
+      }
+    }
+
+    .subheader {
+      color: #767676;
+      margin-bottom: 16px;
+    }
+
+    .divider {
+      border-bottom: 1px solid #EBEBEB;
+    }
+
+    .options {
+      .section {
+        padding: 24px 0;
+      }
+
+      .title {
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 4px;
+      }
+
+      .subtitle {
+        font-size: 14px;
+        color: #767676;
+      }
+
+      .radioGroup {
+        display: flex;
+        margin-top: 16px;
+
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+
+        .radio {
+          display: flex;
+          align-items: center;
+
+          input {
+            margin: 1px 8px 1px 1px;
+            accent-color: #E21B70
+          }
+        }
+      }
+
+      .textarea {
+        border: 1px solid #afafaf;
+        color: #767676;
+        margin-top: 16px;
+        padding: 8px;
+        border-radius: 4px;
+        height: 100px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .footer {
+    position: sticky;
+    bottom: 0;
+    z-index: 3;
+    background-color: white;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    display: flex;
+    padding: 16px;
+    justify-content: space-between;
+
+    .counter {
+      display: flex;
+      align-items: center;
+
+      .minusButton {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #CACACA;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .number {
+        font-weight: 700;
+        font-size: 14px;
+        margin: 0 16px;
+      }
+
+      .addButton {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #FFFFFF;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .addBasketButton {
+      border-radius: 4px;
+      background-color: #E21B70;
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+      height: 48px;
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

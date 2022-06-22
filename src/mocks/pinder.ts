@@ -9,7 +9,8 @@ export const data: Pinder[] = [
     rating: 4.9,
     delivery_fee: 1,
     deal: "Free Delivery",
-    dish_description: "Yummy, delicious plate of goodness",
+    dish_description:
+      "Toasted german multigrain bun, avocado cream, tomato, mushroom, rocket leaves and a slice of gold vegan cheese and choice of 1 x Hot Drink",
     delivery_time: 12,
     dish_id: "1111",
   },
@@ -21,7 +22,8 @@ export const data: Pinder[] = [
     rating: 4.9,
     delivery_fee: 1,
     deal: "Free Delivery",
-    dish_description: "Yummy, delicious plate of goodness",
+    dish_description:
+      "Toasted german multigrain bun, avocado cream, tomato, mushroom, rocket leaves and a slice of gold vegan cheese and choice of 1 x Hot Drink",
     delivery_time: 12,
     dish_id: "2222",
   },
@@ -33,7 +35,8 @@ export const data: Pinder[] = [
     rating: 4.9,
     delivery_fee: 1,
     deal: "Free Delivery",
-    dish_description: "Yummy, delicious plate of goodness",
+    dish_description:
+      "Toasted german multigrain bun, avocado cream, tomato, mushroom, rocket leaves and a slice of gold vegan cheese and choice of 1 x Hot Drink",
     delivery_time: 12,
     dish_id: "3333",
   },
@@ -45,7 +48,8 @@ export const data: Pinder[] = [
     rating: 4.9,
     delivery_fee: 1,
     deal: "Free Delivery",
-    dish_description: "Yummy, delicious plate of goodness",
+    dish_description:
+      "Toasted german multigrain bun, avocado cream, tomato, mushroom, rocket leaves and a slice of gold vegan cheese and choice of 1 x Hot Drink",
     delivery_time: 12,
     dish_id: "4444",
   },
@@ -57,7 +61,8 @@ export const data: Pinder[] = [
     rating: 4.9,
     delivery_fee: 1,
     deal: "Free Delivery",
-    dish_description: "Yummy, delicious plate of goodness",
+    dish_description:
+      "Toasted german multigrain bun, avocado cream, tomato, mushroom, rocket leaves and a slice of gold vegan cheese and choice of 1 x Hot Drink",
     delivery_time: 12,
     dish_id: "5555",
   },
