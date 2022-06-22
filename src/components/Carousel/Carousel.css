@@ -1,77 +1,78 @@
 .Carousel {
-    overflow: hidden;
-    text-align: left;
+  overflow: hidden;
+  text-align: left;
 }
 
 .Carousel-title {
-    font-size: 18px;
-    line-height: 21px;
-    font-weight: 700;
-    color: #333333;   
-    padding: 0 16px;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #333333;
+  padding: 0 16px;
 }
 
 .Carousel-title + .Carousel-cards {
-    margin-top: 8px;
+  margin-top: 8px;
 }
 
 .Carousel-cards {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 8px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    padding-left: 16px;
-    position: relative;
-    width: 1000%;
-    scroll-behavior: smooth;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-left: 16px;
+  position: relative;
+  width: 1000%;
+  scroll-behavior: smooth;
 }
 
 .CarouselCard {
-    cursor: pointer;
-    width: 70vw;
+  cursor: pointer;
+  width: 70vw;
 }
 
 .CarouselCard-imageWrap {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
+  width: 240px;
+  height: 170px;
 }
 
 .CarouselCard-image {
-    width: 100%;
-    border-radius: 8px;
+  width: 100%;
+  border-radius: 8px;
 }
 
 .CarouselCard-favourite {
-    position: absolute;
-    top: 8px; 
-    right: 8px;
-    z-index: 2;
-    width: 36px;
-    height: 36px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
 }
 
 .CarouselCard-image + .CarouselCard-title {
-    margin-top: 8px;
+  margin-top: 8px;
 }
 
 .CarouselCard-title {
-    font-size: 14px;
-    line-height: 16px;
-    color: #333333;
-    font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #333333;
+  font-weight: 700;
 }
 
 .CarouselCard-title + .CarouselCard-info {
-    margin-top: 4px;
+  margin-top: 4px;
 }
 
 .CarouselCard-info {
-    display: flex;
-    gap: 4px;
-    font-size: 14px;
-    line-height: 16px;
-    color: #707070;
-    font-weight: 400;
+  display: flex;
+  gap: 4px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #707070;
+  font-weight: 400;
 }
-

@@ -1,6 +1,6 @@
-import favourite from "./assets/favourite.svg";
-
 import "./Carousel.css";
+
+import favourite from "./assets/favourite.svg";
 
 type CarouselCardProps = {
   title: string;
@@ -17,7 +17,7 @@ const CarouselCard: React.FC<CarouselCardProps> = ({
     <div className="CarouselCard">
       <div className="CarouselCard-imageWrap">
         <img
-          src="https://dummyimage.com/240x150/aaa"
+          src="https://source.unsplash.com/random"
           alt=""
           className="CarouselCard-image"
         />
@@ -48,8 +48,9 @@ const Carousel: React.FC<CarouselProps> = ({ title }) => {
     <div className="Carousel">
       <p className="Carousel-title">{title}</p>
       <div className="Carousel-cards">
-        {items.map((item) => (
+        {items.map((item, index) => (
           <CarouselCard
+            key={index}
             title={item.title}
             pricing={item.pricing}
             categories={item.categories}

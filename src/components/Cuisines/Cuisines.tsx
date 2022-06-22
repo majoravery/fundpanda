@@ -31,12 +31,12 @@ const Cuisines: React.FC = () => {
       <p className="Cuisines-title">Cuisines</p>
       <div className="Cuisines-cards">
         {items.map((item) => (
-          <CuisineCard title={item} />
+          <CuisineCard title={item} key={item} />
         ))}
       </div>
       <div className="Cuisines-cards">
         {items.map((item) => (
-          <CuisineCard title={item} />
+          <CuisineCard title={item} key={item} />
         ))}
       </div>
     </div>
