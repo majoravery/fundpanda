@@ -11,6 +11,7 @@ import cross from "./assets/cross.svg";
 import heart from "./assets/heart.svg";
 import cls from "classnames";
 import Tag from "components/Tag/Tag";
+import { mapDishIdToImage } from "utils";
 
 const tabs = [
   { value: "restaurants", label: "Restaurants" },
@@ -107,7 +108,10 @@ const YumlistPage = () => {
             <div className="content">
               <div className="contentInner">
                 <div className="image">
-                  <img src={showYumlistItem.image_url} alt="item" />
+                  <img
+                    src={mapDishIdToImage[showYumlistItem.dish_id]}
+                    alt="item"
+                  />
                   <div className="icons">
                     <div className="deal">{showYumlistItem.deal}</div>
                     <div className="heart">

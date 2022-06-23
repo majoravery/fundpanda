@@ -125,6 +125,10 @@
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
             position: relative;
+
+            img {
+              max-width: 100%;
+            }
           }
 
           .row {
