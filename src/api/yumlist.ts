@@ -11,7 +11,9 @@ type GetYumlistResponse = Pinder[];
 
 export const getYumlist = async ({ cid }: GetYumlistRequest) => {
   const url = `${API_URL.YUMLIST}?cid=${cid}`;
-  const { data } = await axios.get<GetYumlistResponse>(url, {
+  const {
+    data: { data },
+  } = await axios.get<{ data: GetYumlistResponse }>(url, {
     headers: {
       Accept: "application/json",
       "ngrok-skip-browser-warning": 1,

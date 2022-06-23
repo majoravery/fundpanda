@@ -28,7 +28,7 @@ const tags = [
 ];
 
 const YumlistPage = () => {
-  const { data } = useGetYumlist({ cid: "1111" });
+  const { data } = useGetYumlist({ cid: "sg109sdu" });
   const [showYumlistItem, setShowYumlistItem] = useState<Pinder | null>(null);
   const [selectedTab, setSelectedTab] = useState("food");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
