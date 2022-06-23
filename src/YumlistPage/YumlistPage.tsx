@@ -100,11 +100,7 @@ const YumlistPage = () => {
             <div className="content">
               <div className="contentInner">
                 <div className="image">
-                  <img
-                    height="100%"
-                    src={showYumlistItem.image_url}
-                    alt="item"
-                  />
+                  <img src={showYumlistItem.image_url} alt="item" />
                   <div className="icons">
                     <div className="deal">{showYumlistItem.deal}</div>
                     <div className="heart">

@@ -5,6 +5,7 @@ import plus from "./assets/plus.svg";
 import minus from "./assets/minus.svg";
 
 import "./FoodDescriptionPage.scss";
+import { mapDishIdToImage } from "utils";
 
 const beverageOptions = [
   { value: "one", label: "Special Citron Tea" },
@@ -24,7 +25,7 @@ const FoodDescriptionPage = () => {
       <div className="imageContainer">
         <img
           className="image"
-          src={`https://picsum.photos/${500}/${240}`}
+          src={id ? mapDishIdToImage[id] : ""}
           alt="dish"
         />
       </div>

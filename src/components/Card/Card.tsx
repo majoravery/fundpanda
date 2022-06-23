@@ -1,4 +1,5 @@
 import { Pinder } from "api/recommendations";
+import { mapDishIdToImage } from "utils";
 
 import "./Card.scss";
 
@@ -10,6 +11,7 @@ const Card = ({
   image_url,
   dish_description,
   price,
+  dish_id,
 }: Props) => {
   return (
     <div className="Card">
@@ -20,7 +22,7 @@ const Card = ({
         <div className="price">{`S$${price}`}</div>
       </div>
       <div className="image">
-        <img src={image_url} alt="dish" />
+        {<img src={mapDishIdToImage[dish_id]} alt="dish" />}
       </div>
     </div>
   );

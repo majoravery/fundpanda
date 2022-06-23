@@ -15,6 +15,7 @@ import monica from "./images/4.jpg";
 import richard from "./images/5.jpg";
 import { useNavigate } from "react-router-dom";
 import { useGetRecommendations } from "api/recommendations";
+import { mapDishIdToImage } from "utils";
 
 declare type Direction = "left" | "right" | "up" | "down";
 
@@ -99,7 +100,9 @@ export const FoodSwipeComponent = () => {
                 onCardLeftScreen={() => outOfFrame(food.dish_name)}
               >
                 <div
-                  style={{ backgroundImage: `url(${db[index % 5].url})` }}
+                  style={{
+                    backgroundImage: `url(${mapDishIdToImage[food.dish_id]})`,
+                  }}
                   className="card"
                   {...bind()}
                 >

@@ -12,7 +12,7 @@ export const data: Pinder[] = [
     dish_description:
       "Herbed goat cheese spread, pickled radishes, roasted peppers, avocado and red onions",
     delivery_time: 12,
-    dish_id: "1111",
+    dish_id: "1",
   },
   {
     image_url: "/images/food-photo2.png",
@@ -25,7 +25,7 @@ export const data: Pinder[] = [
     dish_description:
       "Herbed goat cheese spread, pickled radishes, roasted peppers, avocado and red onions",
     delivery_time: 12,
-    dish_id: "2222",
+    dish_id: "2",
   },
   {
     image_url: "/images/food-photo3.png",
@@ -38,7 +38,7 @@ export const data: Pinder[] = [
     dish_description:
       "Herbed goat cheese spread, pickled radishes, roasted peppers, avocado and red onions",
     delivery_time: 12,
-    dish_id: "3333",
+    dish_id: "3",
   },
   {
     image_url: "/images/food-photo1.png",
@@ -51,7 +51,7 @@ export const data: Pinder[] = [
     dish_description:
       "Herbed goat cheese spread, pickled radishes, roasted peppers, avocado and red onions",
     delivery_time: 12,
-    dish_id: "4444",
+    dish_id: "4",
   },
   {
     image_url: "/images/food-photo2.png",
@@ -64,6 +64,6 @@ export const data: Pinder[] = [
     dish_description:
       "Herbed goat cheese spread, pickled radishes, roasted peppers, avocado and red onions",
     delivery_time: 12,
-    dish_id: "5555",
+    dish_id: "5",
   },
 ];

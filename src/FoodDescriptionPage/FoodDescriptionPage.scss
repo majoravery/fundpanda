@@ -2,6 +2,13 @@
   .imageContainer {
     overflow: hidden;
     height: 240px;
+    position: relative;
+
+    img {
+      max-width: 100%;
+      top: -50%;
+      position: absolute;
+    }
   }
 
   .content {
