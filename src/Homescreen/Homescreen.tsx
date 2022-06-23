@@ -23,7 +23,7 @@ const Homescreen: React.FC = () => {
         leftIcons={<img src={menu} alt="menu" />}
         rightIcons={
           <>
-            <img src={heart} alt="heart" />
+            <img src={heart} alt="heart" onClick={() => navigate("/yumlist")} />
             <img src={cart} alt="cart" />
           </>
         }

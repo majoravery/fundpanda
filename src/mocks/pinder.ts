@@ -107,14 +107,14 @@ export const data: Pinder[] = [
   },
   {
     image_url: "mock.png",
-    dish_name: "Seafood Aglio Olio",
-    restaurant_name: "Pasta Mania",
+    dish_name: "Pancakes with butter",
+    restaurant_name: "Cafe Le Pau",
     price: 12,
     rating: 4.5,
     delivery_fee: 3,
     deal: "10% discount",
     dish_description:
-      "Linguine with stir-fried prawn with Italian parsley and Parmigiano-Reggiano cheese sprinkled on",
+      "Fluffy pancake with a good serving of homemade, fragrant butter",
     delivery_time: 15,
     dish_id: "9",
   },

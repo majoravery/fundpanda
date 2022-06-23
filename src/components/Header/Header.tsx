@@ -5,6 +5,7 @@ import React from "react";
 import cart from "./assets/cart.svg";
 import heart from "./assets/heart.svg";
 import menu from "./assets/menu.svg";
+import { useNavigate } from "react-router-dom";
 
 type HeaderProps = {
   theme?: "pink" | "white";
@@ -21,6 +22,8 @@ const Header: React.FC<HeaderProps> = ({
   leftIcons,
   rightIcons,
 }) => {
+  const navigate = useNavigate();
+
   return (
     <div className={`Header m-${theme}`}>
       <div className="Header-leftNav">
@@ -35,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({
           rightIcons
         ) : (
           <>
-            <img src={heart} alt="heart" />
+            <img src={heart} alt="heart" onClick={() => navigate("/yumlist")} />
             <img src={cart} alt="cart" />
           </>
         )}
