@@ -66,6 +66,14 @@
       margin-top: 16px;
       border-bottom: 1px solid #DCDCDC;
     }
+
+    .empty {
+      display: flex;
+      font-size: 14px;
+      justify-content: center;
+      margin-top: 80px;
+      color: #707070;
+    }
   }
 
   .yumlistModal {

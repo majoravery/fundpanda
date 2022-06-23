@@ -48,10 +48,11 @@ const YumlistPage = () => {
       </div>
 
       <div className="tabs">
-        {tabs.map((tab) => (
+        {tabs.map((tab, idx) => (
           <div
             className={cls("tab", { selected: tab.value === selectedTab })}
             onClick={() => setSelectedTab(tab.value)}
+            key={idx}
           >
             {tab.label}
             {tab.value === selectedTab && <div className="bar"></div>}
@@ -79,15 +80,21 @@ const YumlistPage = () => {
       </div>
 
       <div className="yumlist">
-        {data?.map((yumlistItem) => (
-          <div
-            key={yumlistItem.dish_id}
-            className="yumlistItem"
-            onClick={() => setShowYumlistItem(yumlistItem)}
-          >
-            <Card {...yumlistItem} />
+        {Array.isArray(data) ? (
+          data.map((yumlistItem) => (
+            <div
+              key={yumlistItem.dish_id}
+              className="yumlistItem"
+              onClick={() => setShowYumlistItem(yumlistItem)}
+            >
+              <Card {...yumlistItem} />
+            </div>
+          ))
+        ) : (
+          <div className="empty">
+            You have not selected any favourite food item
           </div>
-        ))}
+        )}
       </div>
       {showYumlistItem && (
         <div className="yumlistModal">
