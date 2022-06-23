@@ -16,6 +16,7 @@ import richard from "./images/5.jpg";
 import { useNavigate } from "react-router-dom";
 import { useGetRecommendations } from "api/recommendations";
 import { mapDishIdToImage } from "utils";
+import { addYumlist } from "api/yumlist";
 
 declare type Direction = "left" | "right" | "up" | "down";
 
@@ -67,10 +68,10 @@ export const FoodSwipeComponent = () => {
   );
 
   const swiped = (direction: Direction, nameToDelete: string) => {
+    console.log("direction", direction);
     if (direction === "right") {
-      console.log("direction", direction);
+      addYumlist({ customer_id: "sg109sdu", dish_id: +nameToDelete });
     } else if (direction === "left") {
-      console.log("direction", direction);
     }
   };
 
@@ -94,9 +95,9 @@ export const FoodSwipeComponent = () => {
               <TinderCard
                 ref={childRefs[index] as any}
                 className="swipe"
-                key={food.dish_name}
+                key={food.dish_id}
                 preventSwipe={["up", "down"]}
-                onSwipe={(dir) => swiped(dir, food.dish_name)}
+                onSwipe={(dir) => swiped(dir, food.dish_id)}
                 onCardLeftScreen={() => outOfFrame(food.dish_name)}
               >
                 <div
