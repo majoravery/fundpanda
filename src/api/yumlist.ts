@@ -11,7 +11,12 @@ type GetYumlistResponse = Pinder[];
 
 export const getYumlist = async ({ cid }: GetYumlistRequest) => {
   const url = `${API_URL.YUMLIST}?cid=${cid}`;
-  const { data } = await axios.get<GetYumlistResponse>(url);
+  const { data } = await axios.get<GetYumlistResponse>(url, {
+    headers: {
+      Accept: "application/json",
+      "ngrok-skip-browser-warning": 1,
+    },
+  });
 
   return data;
 };
@@ -36,10 +41,18 @@ export const addYumlist = async ({
   dish_id,
 }: AddYumlistRequest) => {
   const url = `${API_URL.YUMLIST}`;
-  const { data } = await axios.post<AddYumlistResponse>(url, {
-    customer_id,
-    dish_id,
-  });
+  const { data } = await axios.post<AddYumlistResponse>(
+    url,
+    {
+      customer_id,
+      dish_id,
+    },
+    {
+      headers: {
+        "ngrok-skip-browser-warning": 1,
+      },
+    }
+  );
 
   return data;
 };

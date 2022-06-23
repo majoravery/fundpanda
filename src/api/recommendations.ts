@@ -27,9 +27,19 @@ export const getRecommendations = async ({
   city,
 }: GetRecommendationsRequest) => {
   const url = `${API_URL.RECOMMENDATIONS}/${city}/${cid}`;
-  const { data } = await axios.get<GetRecommendationsResponse>(url);
+  const {
+    data: { data },
+  } = await axios.get<{ data: GetRecommendationsResponse }>(url, {
+    headers: {
+      Accept: "application/json",
+      "ngrok-skip-browser-warning": 1,
+    },
+  });
 
-  return data;
+  return data.map(({ dish_id, ...rest }) => ({
+    ...rest,
+    dish_id,
+  }));
 };
 
 export const useGetRecommendations = ({

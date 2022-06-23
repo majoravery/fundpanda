@@ -11,9 +11,9 @@ import RestaurantListingPage from "./RestaurantListingPage/RestaurantListingPage
 import SearchPage from "./SearchPage/SearchPage";
 import YumlistPage from "./YumlistPage/YumlistPage";
 
-if (process.env.NODE_ENV === "development") {
-  require("mocks");
-}
+// if (process.env.NODE_ENV === "development") {
+//   require("mocks");
+// }
 
 function App() {
   const queryClient = new QueryClient();
