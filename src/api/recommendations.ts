@@ -26,7 +26,7 @@ export const getRecommendations = async ({
   cid,
   city,
 }: GetRecommendationsRequest) => {
-  const url = `${API_URL.RECOMMENDATIONS}?cid=${cid}&city=${city}`;
+  const url = `${API_URL.RECOMMENDATIONS}/${city}/${cid}`;
   const { data } = await axios.get<GetRecommendationsResponse>(url);
 
   return data;
