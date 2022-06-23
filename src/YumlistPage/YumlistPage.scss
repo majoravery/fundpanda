@@ -99,8 +99,99 @@
       .content {
         display: flex;
         justify-content: center;
-        align-items: center;
+        // align-items: center;
         flex-grow: 1;
+
+        .contentInner {
+          height: 70vh;
+          max-width: 80vw;
+          width: 550px;
+          background-color: white;
+          border-radius: 16px;
+          padding: 12px 9px;
+          margin-top: 20px;
+
+          .image {
+            height: 470px;
+            overflow: hidden;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            position: relative;
+          }
+
+          .row {
+            display: flex;
+            justify-content: space-between;
+          }
+          
+          .icons {
+            position:absolute;
+            top: 13px;
+            left: 2px;
+            right: 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+
+          .deal {
+            height: 24px;
+            background-color: #E21B70;
+            border-radius: 0px 8px 8px 0px;
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2px 4px;
+            line-height: 14px;
+          }
+
+          .heart {
+            margin-right: 16px;
+          }
+
+          .details {
+            padding: 16px;
+          }
+
+          .title {
+            font-weight: 700;
+            font-size: 16px;
+          }
+
+          .price {
+            font-size: 14px;
+          }
+
+          .subtitle {
+            font-size: 14px;
+          }
+
+          .rating {
+            font-weight: 700;
+            font-size: 12px;
+          }
+
+          .delivery {
+            font-weight: 700;
+            font-size: 12px;
+          }
+
+          .orderButton {
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #E21B70;
+            border-radius: 8px;
+            height: 48px;
+            width: 100%;
+            font-weight: 700;
+            font-size: 14px;
+          }
+        }
       }
     }
   }

@@ -6,9 +6,9 @@ import Card from "components/Card/Card";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { FoodSwipeComponent } from "../FoodSwipe/FoodSwipe";
 import back from "./assets/back.svg";
 import cross from "./assets/cross.svg";
+import heart from "./assets/heart.svg";
 import cls from "classnames";
 import Tag from "components/Tag/Tag";
 
@@ -98,7 +98,45 @@ const YumlistPage = () => {
               </div>
             </div>
             <div className="content">
-              <FoodSwipeComponent />
+              <div className="contentInner">
+                <div className="image">
+                  <img
+                    height="100%"
+                    src={showYumlistItem.image_url}
+                    alt="item"
+                  />
+                  <div className="icons">
+                    <div className="deal">{showYumlistItem.deal}</div>
+                    <div className="heart">
+                      <img src={heart} alt="heart" />
+                    </div>
+                  </div>
+                </div>
+                <div className="details">
+                  <div className="row">
+                    <div className="title">{showYumlistItem.dish_name}</div>
+                    <div className="price">S${showYumlistItem.price}</div>
+                  </div>
+                  <div className="row">
+                    <div className="subtitle">
+                      {showYumlistItem.restaurant_name}
+                    </div>
+                    <div className="rating">{showYumlistItem.rating}</div>
+                  </div>
+                  <div className="row">
+                    <div className="delivery">
+                      {showYumlistItem.delivery_fee}
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="orderButton"
+                  onClick={() => navigate(`/dish/${showYumlistItem.dish_id}`)}
+                >
+                  Order
+                </div>
+              </div>
+              {/* <FoodSwipeComponent /> */}
             </div>
           </div>
         </div>
