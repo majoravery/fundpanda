@@ -2,7 +2,7 @@
   "name": "fundpanda",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://cf34-111-65-32-165.ap.ngrok.io",
+  "proxy": "https://427e-116-14-3-157.ap.ngrok.io",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
